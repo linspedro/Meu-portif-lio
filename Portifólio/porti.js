@@ -60,3 +60,19 @@ but.forEach((valor, pos) => {
         but[pos].classList.add('ativo')
     })
 })
+
+const bnt_edu = document.getElementById('bnt_edu')
+const horta_bnt = document.getElementById('horta_bnt')
+const bnt_git = document.getElementById('bnt_git')
+
+bnt_edu.addEventListener('click', () =>{
+    window.location.assign('https://www.figma.com/proto/4FLax3DbRZd7DsKASorQFc/projeto-integrador?node-id=60-68&starting-point-node-id=60%3A68&t=o3IJfoFqLH2zVfek-1')
+})
+
+horta_bnt.addEventListener('click', ()=>{
+    window.location.assign('https://www.figma.com/proto/5Ybr07JMRCXbMjpIBI2nSJ/Untitled?node-id=50-184&starting-point-node-id=177%3A1374&t=W66tesrIet3qlNmV-1')
+})
+
+bnt_git.addEventListener('click', () =>{
+    window.location.assign('https://github.com/linspedro')
+})
