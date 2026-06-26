@@ -76,3 +76,9 @@ horta_bnt.addEventListener('click', ()=>{
 bnt_git.addEventListener('click', () =>{
     window.location.assign('https://github.com/linspedro')
 })
+
+const bnt_eduProjeto = document.getElementById('bnt_eduProjeto')
+
+bnt_eduProjeto.addEventListener('click', () => {
+    window.location.assign('https://edu-ia-frontend.vercel.app')
+})
