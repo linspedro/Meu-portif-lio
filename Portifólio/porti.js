@@ -1,84 +1,98 @@
-const insta = document.getElementById("insta")
-const tele = document.getElementById("tele")
-const Email = document.getElementById("Email")
+// ============================
+// CONTATO
+// ============================
 
-let troca = false
+const insta = document.getElementById("insta");
+const tele = document.getElementById("tele");
+const Email = document.getElementById("Email");
 
+// Instagram
+insta.addEventListener("click", () => {
+  if (insta.value === "Instagram") {
+    insta.value = "pedro_lins.h";
+  } else {
+    insta.value = "Instagram";
+  }
+});
 
-insta.addEventListener("click",() =>{
-    if(!troca){
-        insta.value = 'pedro_lins.h'
-        troca = true
-    }else{
-        insta.value = 'Instagram'
-        troca = false
-    }
-})
-
-
+// Telefone
 tele.addEventListener("click", () => {
-    if(!troca){
-        tele.value = '(45) 998348568'
-        troca = true
-    }else{
-        tele.value = 'Telefone'
-        troca = false
-    }
-})
+  if (tele.value === "Telefone") {
+    tele.value = "(45) 99834-8568";
+  } else {
+    tele.value = "Telefone";
+  }
+});
 
-Email.addEventListener('click', () => {
-    if(!troca){
-        Email.value ='lins90748@gmail.com'
-        troca = true
-    }else{
-        Email.value = 'Email'
-        troca = false
-    }
+// Email
+Email.addEventListener("click", () => {
+  if (Email.value === "Email") {
+    Email.value = "lins90748@gmail.com";
+  } else {
+    Email.value = "Email";
+  }
+});
 
-})
 
-//parte do projeto
+// ============================
+// TROCAR PROJETOS
+// ============================
 
-const but = document.querySelectorAll('.projeto-btn')
-const conteudo = document.querySelectorAll('.projetos-nãoativo')
+const botoesProjeto = document.querySelectorAll(".projeto-btn");
+const conteudos = document.querySelectorAll(".projetos-nãoativo");
 
-but.forEach((valor, pos) => {
-    valor.addEventListener('click', () => {
-        conteudo.forEach((conteudo) => {
-            conteudo.classList.remove('ativo')
-            console.log(conteudo)
-        })
+botoesProjeto.forEach((botao, index) => {
+  botao.addEventListener("click", () => {
 
-        but.forEach((butt) =>{
-            butt.classList.remove('ativo')
-            console.log(butt)
-        })
+    conteudos.forEach((conteudo) => {
+      conteudo.classList.remove("ativo");
+    });
 
-        // aqui e parte para mostra conteudo quando for selecionado
+    botoesProjeto.forEach((btn) => {
+      btn.classList.remove("ativo");
+    });
 
-        conteudo[pos].classList.add('ativo')
-        but[pos].classList.add('ativo')
-    })
-})
+    conteudos[index].classList.add("ativo");
+    botao.classList.add("ativo");
 
-const bnt_edu = document.getElementById('bnt_edu')
-const horta_bnt = document.getElementById('horta_bnt')
-const bnt_git = document.getElementById('bnt_git')
+  });
+});
 
-bnt_edu.addEventListener('click', () =>{
-    window.location.assign('https://www.figma.com/proto/4FLax3DbRZd7DsKASorQFc/projeto-integrador?node-id=60-68&starting-point-node-id=60%3A68&t=o3IJfoFqLH2zVfek-1')
-})
 
-horta_bnt.addEventListener('click', ()=>{
-    window.location.assign('https://www.figma.com/proto/5Ybr07JMRCXbMjpIBI2nSJ/Untitled?node-id=50-184&starting-point-node-id=177%3A1374&t=W66tesrIet3qlNmV-1')
-})
+// ============================
+// LINKS
+// ============================
 
-bnt_git.addEventListener('click', () =>{
-    window.location.assign('https://github.com/linspedro')
-})
+function abrir(url) {
+  window.open(url, "_blank");
+}
 
-const bnt_eduProjeto = document.getElementById('bnt_eduProjeto')
+const bnt_git = document.getElementById("bnt_git");
+const bnt_edu = document.getElementById("bnt_edu");
+const horta_bnt = document.getElementById("horta_bnt");
+const bnt_eduProjeto = document.getElementById("bnt_eduProjeto");
 
-bnt_eduProjeto.addEventListener('click', () => {
-    window.location.assign('https://edu-ia-frontend.vercel.app')
-})
+bnt_git.addEventListener("click", () => {
+  abrir("https://github.com/linspedro");
+});
+
+bnt_edu.addEventListener("click", () => {
+  abrir("https://www.figma.com/proto/4FLax3DbRZd7DsKASorQFc/projeto-integrador?node-id=60-68&starting-point-node-id=60%3A68&t=o3IJfoFqLH2zVfek-1");
+});
+
+horta_bnt.addEventListener("click", () => {
+  abrir("https://www.figma.com/proto/5Ybr07JMRCXbMjpIBI2nSJ/Untitled?node-id=50-184&starting-point-node-id=177%3A1374&t=W66tesrIet3qlNmV-1");
+});
+
+bnt_eduProjeto.addEventListener("click", () => {
+  abrir("https://edu-ia-frontend.vercel.app");
+});
+
+
+// ============================
+// ANIMAÇÃO AO CARREGAR A PÁGINA
+// ============================
+
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
