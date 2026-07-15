@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio | Pedro</title>
+    <title>Pedro Lins | Front-End & Dados</title>
+    <meta
+      name="description"
+      content="Portfólio de Pedro Lins — desenvolvedor front-end em formação com foco em React, e em transição para análise de dados (Excel, SQL). Confira projetos, experiência e certificados."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="porti.css" />
   </head>
 
@@ -14,11 +24,14 @@
         <h1>Pedro Lins</h1>
       </div>
 
-      <nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navMenu">
         <ul>
           <li><a href="#Home">Home</a></li>
           <li><a href="#Projetos">Projetos</a></li>
-          <li><a href="#Certificados">Certificados</a></li>
           <li><a href="#Experiencia">Experiência</a></li>
           <li><a href="#Sobre">Sobre mim</a></li>
           <li><a href="#Contato">Contato</a></li>
@@ -30,14 +43,21 @@
     <main id="Home">
       <div class="mainn">
         <div>
+          <p class="eyebrow">Front-End • Dados</p>
           <h1>Olá, me chamo <span>Pedro</span></h1>
           <p>
-            Desenvolvedor Front-End focado em criar interfaces modernas e
-            responsivas. 🚀
+            Estudante de tecnologia construindo produtos com React e
+            aprendendo a transformar dados em decisões com Excel e SQL. 🚀
           </p>
 
           <div class="main-buttons">
-            <a href="https://github.com/seuusuario" id="bnt_git" class="but" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/linspedro"
+              id="bnt_git"
+              class="but"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               GitHub
             </a>
             <a href="#Contato" class="but">Entrar em contato</a>
@@ -47,24 +67,30 @@
     </main>
 
     <!-- sobre mim -->
-    <section class="sobre-mim" id="Sobre">
+    <section class="sobre-mim reveal" id="Sobre">
       <h2 class="h2-sobre">Sobre mim</h2>
 
       <div class="sobre">
+        <figure class="avatar">
+          <img src="./src/pe.jpg" alt="Foto de perfil do Pedro" />
+        </figure>
+
         <div class="sobre-part">
           <div class="text-sobre">
             <p>
               Olá, meu nome é Pedro, tenho 16 anos e sou estudante com grande
-              interesse na área de tecnologia. Atualmente, estou focado em
-              aprender programação e me preparar para ingressar no curso de
-              Engenharia de Software.
+              interesse em tecnologia. Hoje curso e pratico desenvolvimento
+              front-end com React, e estou expandindo minha base para a área
+              de dados, aprendendo Excel e SQL para análise e organização de
+              informações.
             </p>
 
             <p>
-              Gosto de desenvolver projetos práticos, aprender novas tecnologias e
-              evoluir constantemente como desenvolvedor. Meu objetivo é construir
-              uma base sólida na área de desenvolvimento web e, no futuro, atuar
-              profissionalmente criando soluções eficientes e inovadoras. 💡
+              Gosto de desenvolver projetos práticos do início ao fim — do
+              protótipo no Figma até a interface funcionando — e de entender
+              os números por trás de um produto. Meu objetivo é conseguir um
+              estágio onde eu possa aplicar essas duas frentes e continuar
+              evoluindo como profissional. 
             </p>
           </div>
 
@@ -73,44 +99,53 @@
             <a class="pro" href="#Projetos">Ver projetos</a>
           </div>
         </div>
-
-        <figure class="avatar">
-          <img src="./src/pe.jpg" alt="Foto de perfil do Pedro" />
-        </figure>
       </div>
 
       <!-- Habilidades -->
       <div class="Habilidades">
         <h2>Habilidades</h2>
 
-        <div class="front-edn">
-          <div><h5>Front-End</h5></div>
-          <figure><img src="./src/html-logo-png-3.png" alt="HTML logo" /></figure>
-          <figure><img src="./src/R.png" alt="CSS logo" /></figure>
-          <figure>
-            <img
-              src="./src/javascript-logo-javascript-icon-transparent-free-png.webp"
-              alt="JavaScript logo"
-            />
-          </figure>
-        </div>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h5>Front-End</h5>
+            <div class="skill-icons">
+              <figure title="HTML"><img src="./src/html-logo-png-3.png" alt="HTML" /></figure>
+              <figure title="CSS"><img src="./src/R.png" alt="CSS" /></figure>
+              <figure title="JavaScript">
+                <img
+                  src="./src/javascript-logo-javascript-icon-transparent-free-png.webp"
+                  alt="JavaScript"
+                />
+              </figure>
+              <figure title="React"><span class="skill-text">React</span></figure>
+              <figure title="Tailwind"><span class="skill-text">Tailwind</span></figure>
+            </div>
+          </div>
 
-        <div class="back-end">
-          <div><h5>Back-End</h5></div>
-          <figure></figure>
-        </div>
+          <div class="skill-group reveal">
+            <h5>Dados</h5>
+            <div class="skill-icons">
+              <figure title="Excel"><span class="skill-text">Excel</span></figure>
+              <figure title="SQL"><span class="skill-text">SQL</span></figure>
+            </div>
+            <span class="skill-note">Em aprendizado</span>
+          </div>
 
-        <div class="ferraentas">
-          <div><h5>Ferramentas</h5></div>
-          <figure>
-            <img src="./src/figma-removebg-preview.png" alt="Figma" />
-          </figure>
+          <div class="skill-group reveal">
+            <h5>Ferramentas</h5>
+            <div class="skill-icons">
+              <figure title="Figma"><img src="./src/figma-removebg-preview.png" alt="Figma" /></figure>
+              <figure title="Git"><span class="skill-text">Git</span></figure>
+              <figure title="GitHub"><span class="skill-text">GitHub</span></figure>
+              <figure title="FlutterFlow"><span class="skill-text">FlutterFlow</span></figure>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Projetos -->
-    <section class="Projeto" id="Projetos">
+    <section class="Projeto reveal" id="Projetos">
       <h2>Projetos</h2>
 
       <div class="projeto-button">
@@ -125,7 +160,12 @@
               <img src="./src/edu.PNG" alt="Imagem do projeto Edu+.IA" />
               <div class="card-content">
                 <h3>Edu+.IA</h3>
-                <p>Sistema com objetivo de ajudar professores no auxílio de planejamento de aula e tarefas.</p>
+                <p>
+                  Plataforma de planejamento educacional com IA para ajudar
+                  professores a organizar aulas e tarefas. Atuei como gerente
+                  do projeto, front-end em React e front-end/back-end em
+                  Node.js + PostgreSQL.
+                </p>
                 <button id="bnt_eduProjeto" type="button">Ver Projeto</button>
               </div>
             </div>
@@ -138,7 +178,7 @@
               <img src="./src/Capturar.PNG" alt="Protótipo capturado do Edu+.IA" />
               <div class="card-content">
                 <h3>Edu+.IA</h3>
-                <p>Protótipo da plataforma Edu+.IA.</p>
+                <p>Protótipo de UI/UX da plataforma Edu+.IA, feito no Figma.</p>
                 <button id="bnt_edu" type="button">Ver Protótipo</button>
               </div>
             </div>
@@ -147,7 +187,7 @@
               <img src="./src/horta.PNG" alt="Imagem do app organizador de horta" />
               <div class="card-content">
                 <h3>Organizador de Horta</h3>
-                <p>App para organizar plantas e tarefas.</p>
+                <p>Protótipo de app para organizar plantas e tarefas de cuidado.</p>
                 <button id="horta_bnt" type="button">Ver Protótipo</button>
               </div>
             </div>
@@ -156,69 +196,18 @@
       </div>
     </section>
 
-    <!-- ✅ Certificados 🎓 -->
-    <section class="certificados" id="Certificados">
-      <h2>Certificados</h2>
-
-      <div class="cert-grid">
-        <div class="cert-card">
-          <h3>HTML • CSS • JavaScript</h3>
-          <p>Certificado de conclusão (substitua pelo curso real).</p>
-          <a class="cert-btn" href="https://link-do-certificado.com" target="_blank" rel="noopener noreferrer">
-            Ver certificado
-          </a>
-        </div>
-
-        <div class="cert-card">
-          <h3>Figma • UI Design</h3>
-          <p>Certificação voltada para prototipação e design de interfaces.</p>
-          <a class="cert-btn" href="https://link-do-certificado.com" target="_blank" rel="noopener noreferrer">
-            Ver certificado
-          </a>
-        </div>
-
-        <div class="cert-card">
-          <h3>React • Front-End</h3>
-          <p>Trilhas e projetos com React (adicione o link do seu certificado).</p>
-          <a class="cert-btn" href="https://link-do-certificado.com" target="_blank" rel="noopener noreferrer">
-            Ver certificado
-          </a>
-        </div>
-
-        <div class="cert-card">
-          <h3>Node.js • Back-End</h3>
-          <p>Certificado de estudos e prática com Node (se tiver).</p>
-          <a class="cert-btn" href="https://link-do-certificado.com" target="_blank" rel="noopener noreferrer">
-            Ver certificado
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Experiência -->
-    <section class="experiencia" id="Experiencia">
+    <section class="experiencia reveal" id="Experiencia">
       <h2>Experiência</h2>
       <div class="timeline-container">
-        <div class="timeline">
-          <div class="timeline-card">
-            <div class="timeline-badge">Dez 2025 - Jan 2026</div>
-            <div class="timeline-content">
-              <h3>Projeto Front-end</h3>
-              <p>Desenvolvimento da interface com HTML e CSS puro. Foco em responsividade e design moderno.</p>
-              <div class="tech-badges">
-                <span class="tech">HTML</span>
-                <span class="tech">CSS</span>
-              </div>
-            </div>
-          </div>
-
+        <div class="timeline timeline-single">
           <div class="timeline-card">
             <div class="timeline-badge ativo">Fev - Dez 2026</div>
             <div class="timeline-content">
-              <h3>Edu+IA - Gerente do TCC</h3>
+              <h3>Edu+.IA - Gerente do TCC</h3>
               <p>
                 Full-stack: Design/UX, Front-end React, Back-end Node.js + Figma.
-                Gerenciamento equipe, organização documentos e distribuição tarefas.
+                Gerenciamento de equipe, organização de documentos e distribuição de tarefas.
               </p>
               <div class="tech-badges">
                 <span class="tech">React</span>
@@ -233,13 +222,20 @@
     </section>
 
     <!-- Contato -->
-    <section class="contato" id="Contato">
+    <section class="contato reveal" id="Contato">
       <h2>Contato</h2>
+      <p class="text-contato">Clique para copiar</p>
 
       <div class="buntt-contato">
-        <input type="button" value="Instagram" id="insta" />
-        <input type="button" value="Telefone" id="tele" />
-        <input type="button" value="Email" id="Email" />
+        <button type="button" class="contato-btn" id="insta" data-default="Instagram" data-value="pedro_lins.h">
+          Instagram
+        </button>
+        <button type="button" class="contato-btn" id="tele" data-default="Telefone" data-value="(45) 99834-8568">
+          Telefone
+        </button>
+        <button type="button" class="contato-btn" id="Email" data-default="Email" data-value="lins90748@gmail.com">
+          Email
+        </button>
       </div>
     </section>
 
