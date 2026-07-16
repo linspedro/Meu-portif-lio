@@ -133,6 +133,7 @@ button:focus-visible {
   border: none;
   cursor: pointer;
   padding: 8px;
+  z-index: 101;
 }
 
 .menu-toggle span {
@@ -238,7 +239,7 @@ main::after {
 }
 
 .mainn h1 {
-  font-size: 3rem;
+  font-size: clamp(2.1rem, 6vw, 3rem);
   animation: heroIn 0.8s ease 0.1s both;
 }
 
@@ -322,7 +323,7 @@ main::after {
 
 .h2-sobre {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: clamp(1.7rem, 5vw, 2.2rem);
   margin-bottom: 2.5rem;
 }
 
@@ -339,6 +340,7 @@ main::after {
   display: flex;
   flex-direction: column;
   max-width: 600px;
+  width: 100%;
 }
 
 .avatar {
@@ -448,7 +450,7 @@ main::after {
 .Habilidades h2 {
   text-align: center;
   margin-bottom: 50px;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
 
 .skills-grid {
@@ -560,7 +562,7 @@ main::after {
 }
 
 .Projeto h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   text-align: center;
   margin-bottom: 3rem;
   background: linear-gradient(135deg, #e6f0ff, #1e90ff);
@@ -626,10 +628,12 @@ main::after {
 .projetoss {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .projetos-nãoativo {
   display: none;
+  width: 100%;
 }
 
 .projetos-nãoativo.ativo {
@@ -650,7 +654,7 @@ main::after {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   justify-content: center;
   padding: 0 1rem;
@@ -710,6 +714,7 @@ main::after {
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
+  width: 100%;
 }
 
 .card-content button:hover {
@@ -718,6 +723,93 @@ main::after {
   box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
 }
 
+/* =======================
+   Certificados
+======================= */
+
+.certificados {
+  padding: 80px 5%;
+  background: linear-gradient(135deg, rgba(11, 26, 51, 0.6), rgba(6, 22, 49, 0.6));
+  position: relative;
+  overflow: hidden;
+}
+
+.certificados::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #1e90ff, transparent);
+}
+
+.certificados h2 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #e6f0ff, #1e90ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  background: rgba(11, 26, 51, 0.9);
+  border-radius: 24px;
+  border: 1px solid rgba(30, 144, 255, 0.3);
+  padding: 1.6rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  border-color: #1e90ff;
+  box-shadow: 0 20px 50px rgba(30, 144, 255, 0.35);
+}
+
+.cert-card h3 {
+  margin-bottom: 0.8rem;
+  color: #e6f0ff;
+  font-size: 1.2rem;
+}
+
+.cert-card p {
+  color: #9bb7e0;
+  font-size: 14px;
+  margin-bottom: 1.2rem;
+}
+
+.cert-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.3rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #1e90ff, #4da3ff);
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cert-btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
+}
 
 /* =======================
    Experiência / Timeline
@@ -729,7 +821,7 @@ main::after {
 }
 
 .experiencia h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   text-align: center;
   margin-bottom: 4rem;
   background: linear-gradient(135deg, #e6f0ff, #1e90ff);
@@ -761,6 +853,7 @@ main::after {
   text-align: center;
   margin-bottom: 0;
   max-width: 560px;
+  width: 100%;
 }
 
 .timeline-card {
@@ -775,7 +868,6 @@ main::after {
 }
 
 .timeline-badge {
-  
   background: linear-gradient(135deg, #1e90ff, #4da3ff);
   color: white;
   padding: 0.75rem 1rem;
@@ -818,6 +910,7 @@ main::after {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   margin: 0 2rem;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  width: 100%;
 }
 
 .timeline-content:hover {
@@ -887,7 +980,7 @@ main::after {
 }
 
 .contato h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   text-align: center;
   margin-bottom: 0.75rem;
 }
@@ -972,7 +1065,27 @@ footer {
 }
 
 /* =======================
-   Responsivo
+   Responsivo — tablets (≤ 1024px)
+======================= */
+
+@media (max-width: 1024px) {
+  .Habilidades {
+    padding: 70px 6%;
+  }
+
+  .sobre {
+    gap: 2rem;
+  }
+
+  main::before,
+  main::after {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* =======================
+   Responsivo — celulares grandes / tablets em pé (≤ 768px)
 ======================= */
 
 @media (max-width: 768px) {
@@ -981,38 +1094,71 @@ footer {
   }
 
   #navMenu {
-    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
+    background: #061631;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
   }
 
   #navMenu.aberto {
-    display: block;
+    max-height: 400px;
   }
 
   .menu ul {
     flex-direction: column;
     gap: 0;
-    padding-bottom: 12px;
+    padding: 10px 0 16px;
   }
 
   .menu li {
-    padding: 10px 0;
+    padding: 12px 0;
     text-align: center;
     border-top: 1px solid rgba(30, 144, 255, 0.15);
   }
 
-  .mainn h1 {
-    font-size: 2.1rem;
+  main {
+    min-height: auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .mainn p {
+    padding: 0 0.5rem;
+  }
+
+  .main-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .but {
+    text-align: center;
+    padding: 0.9rem 1.5rem;
+  }
+
+  main::before,
+  main::after {
+    width: 260px;
+    height: 260px;
+  }
+
+  .sobre-mim {
+    padding-top: 1rem;
   }
 
   .sobre {
     flex-direction: column;
     text-align: center;
+    padding: 0 1.25rem;
   }
 
   .avatar {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
   }
 
   .text-sobre {
@@ -1023,28 +1169,148 @@ footer {
     justify-content: center;
   }
 
+  .Habilidades {
+    padding: 60px 6%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .Projeto,
+  .certificados,
+  .experiencia {
+    padding: 60px 6%;
+  }
+
   .projeto-button {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
-  .timeline::before {
-    left: 20px;
-  }
-
-  .timeline-card {
-    flex-direction: column !important;
-    margin-bottom: 3rem;
+  .projeto-btn {
     text-align: center;
   }
 
-  .timeline-badge {
-    margin-bottom: 1rem;
-    order: -1;
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
   }
 
   .timeline-content {
-    margin: 0 !important;
-    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .contato {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .buntt-contato {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contato-btn {
+    text-align: center;
+  }
+}
+
+/* =======================
+   Responsivo — celulares pequenos (≤ 480px)
+======================= */
+
+@media (max-width: 480px) {
+  .menu {
+    padding: 0 14px;
+  }
+
+  .menu h1 {
+    font-size: 1.2rem;
+  }
+
+  main {
+    padding: 3rem 1.25rem;
+  }
+
+  .mainn h1 {
+    font-size: 1.9rem;
+  }
+
+  .mainn p {
+    font-size: 0.95rem;
+  }
+
+  .avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .text-sobre {
+    padding: 1.5rem 1.1rem;
+    font-size: 0.95rem;
+  }
+
+  .cot,
+  .pro {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skill-icons {
+    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+  }
+
+  .skill-icons figure {
+    height: 60px;
+  }
+
+  .skill-icons img {
+    width: 32px;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .card-content {
+    padding: 1.2rem;
+  }
+
+  .timeline-content {
+    margin: 0;
+    padding: 1.4rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .cert-card {
+    padding: 1.2rem;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* =======================
+   Responsivo — telas bem pequenas (≤ 340px)
+======================= */
+
+@media (max-width: 340px) {
+  .mainn h1 {
+    font-size: 1.6rem;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skill-icons {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
